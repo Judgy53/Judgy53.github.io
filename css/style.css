@@ -2,7 +2,7 @@
 ------------------------------------
   Civic - CV Resume
   Version: 1.0
- ------------------------------------ 
+ ------------------------------------
  ====================================*/
 
 /*----------------------------------------*/
@@ -67,7 +67,7 @@ ol {
 	Helper CSS
 -----------------------*/
 .spad {
-	padding-top: 125px;
+	padding-top: 60px;
 	padding-bottom: 110px;
 }
 
@@ -410,7 +410,8 @@ ol {
 }
 
 .hero-image {
-	padding-top: 70px;
+  margin-left: 2rem;
+	max-height: 800px;
 }
 
 .hero-info h2 {
@@ -453,9 +454,33 @@ ol {
 }
 
 .social-section .social-links a {
+  --hover-color: #e1003c;
 	color: #484848;
 	font-size: 36px;
 	margin-right: 40px;
+  display: inline-block;
+  transition: all 0.3s;
+
+  &:hover {
+    color: var(--hover-color);
+    transform: scale(1.25);
+  }
+
+  &.link-github {
+    --hover-color: black;
+  }
+
+  &.link-linkedin {
+    --hover-color: #0077b5;
+  }
+
+  &.link-twitter {
+    --hover-color: #1da1f2;
+  }
+
+  &.link-twitch {
+    --hover-color: #a970ff;
+  }
 }
 
 .social-section .social-link-warp {
@@ -502,6 +527,24 @@ ol {
 .resume-list li {
 	margin-bottom: 120px;
 	position: relative;
+}
+
+.resume-list .project-detail-list {
+  margin-top: .5rem;
+  margin-left: 3rem;
+
+  li {
+    margin-bottom: 1rem;
+
+    &::after {
+      content: unset;
+    }
+  }
+}
+
+.project-link {
+  color: black;
+  font-size: 1.5rem;
 }
 
 .resume-list li:last-child {
